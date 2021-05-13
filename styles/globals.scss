@@ -292,3 +292,9 @@ main {
   margin-top: $header-height;
   padding-top: 1rem;
 }
+
+footer {
+  margin-top: $header-height;
+  background-color: rgb($very-light-grey);
+  min-height: $header-height;
+}
