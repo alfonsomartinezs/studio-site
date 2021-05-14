@@ -15,7 +15,7 @@ const Header = () => {
     <header>
       <div className="container">
       <span onClick={ closeMenu}><Link href="/" >LOGO</Link></span>
-      <span onClick={toggleMenu}>{ show ? "Close": "Menu"}</span>
+      <span className="menu-toggler" onClick={toggleMenu}>{ show ? "Close": "Menu"}</span>
       <nav className={ show ? "show": ""}>
         <ul className="nav-list">
           <li className="nav-list-item" onClick={closeMenu}><Link href="/portfolio">Portfolio</Link></li>

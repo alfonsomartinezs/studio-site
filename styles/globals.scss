@@ -272,6 +272,10 @@ header {
   }
 }
 
+.menu-toggler {
+  cursor: pointer;
+}
+
 nav {
   background-color: rgb($very-light-grey);
   position: fixed;
@@ -296,11 +300,11 @@ nav.show {
 main {
   margin-top: $header-height;
   padding-top: 1rem;
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 footer {
-  margin-top: $header-height;
+  // margin-top: $header-height;
   background-color: rgb($very-light-grey);
   min-height: $header-height;
   padding: 5rem 0 4rem;
@@ -320,17 +324,47 @@ footer {
   position: absolute;
   top: 0;
   margin-top: -3.5rem;
-  padding: 1.7rem;
+  // padding: 1.7rem;
   background-color: rgb($black);
   color: rgb($white);
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
-  width: 7rem;
-  height: 7rem;
-  display: grid;
-  place-items: center;
+  width: 120px;
+  height: 120px;
+  // display: grid;
+  // place-items: center;
+  text-align: center;
   font-weight: 700;
-  line-height: 300%;
+  line-height: 120px;
+  font-size: 26px;
+}
+
+@media only screen and (min-width: 750px) {
+  .footer-brand {
+    position: relative;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: max-content auto;
+    align-items: center;
+    padding: 0;
+    padding-right: 5rem;
+    height: 8rem;
+    width: max-content;
+  }
+  .footer-link-list {
+    display: flex;
+  }
+  .footer-link-item {
+    padding: initial;
+    margin: initial;
+    padding: 1.7rem;
+    margin-left: 0.85rem;
+    margin-right: 0.85rem;
+  }
+  .footer-brand {
+    margin-top: 0;
+  }
 }
