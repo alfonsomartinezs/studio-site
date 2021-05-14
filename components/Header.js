@@ -11,9 +11,9 @@ const Header = () => {
   }
 
 
-  console.log(show)
   return (
-    <header className="container">
+    <header>
+      <div className="container">
       <span onClick={ closeMenu}><Link href="/" >LOGO</Link></span>
       <span onClick={toggleMenu}>{ show ? "Close": "Menu"}</span>
       <nav className={ show ? "show": ""}>
@@ -22,7 +22,8 @@ const Header = () => {
           <li className="nav-list-item" onClick={closeMenu}><Link href="/about">About Us</Link></li>
           <li className="nav-list-item" onClick={closeMenu}><Link href="/contact">Contact</Link></li>
         </ul>
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 }
