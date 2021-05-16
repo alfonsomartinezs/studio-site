@@ -1,6 +1,4 @@
 /*colors*/
-$black: (0 0 0);
-$white: (255 255 255);
 
 $dark-blue: (27 29 35);
 $dark-grey: (96 99 109);
@@ -9,7 +7,10 @@ $light-grey: (200 204 216);
 $very-light-grey: (238 239 244);
 $red: (223 86 86);
 
-@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
+$black: $dark-blue;
+$white: (255 255 255);
+
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700;900&display=swap");
 
 html,
 body,
@@ -128,6 +129,10 @@ body {
 body {
   font-family: "Spartan", sans-serif;
   line-height: 1;
+  color: rgb($dark-blue);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 25px;
 }
 ol,
 ul {
@@ -158,12 +163,6 @@ $transition-speed-slow: 300ms;
   font-size: 15px;
 }
 
-body {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 25px;
-}
-
 strong {
   font-weight: 700;
 }
@@ -173,6 +172,7 @@ h2,
 h3 {
   font-weight: 600;
   font-family: "Spartan", sans-serif;
+  color: inherit;
 }
 
 h1 {
@@ -250,7 +250,7 @@ a {
 }
 
 $header-height-sm: 5rem;
-$header-height-md: 30px;
+$header-height-md: 10rem;
 $header-height-lg: 30px;
 
 $header-height: $header-height-sm;
@@ -262,18 +262,29 @@ header {
   top: 0;
   left: 0;
   right: 0;
-
+  // border: 2px solid red;
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
     height: 100%;
+
+    & > a {
+      font-size: 1.5rem;
+      display: block;
+      // border: 2px solid red;
+      line-height: 3.5rem;
+      height: 3rem;
+      font-weight: 900;
+      letter-spacing: -3px;
+    }
   }
 }
 
 .menu-toggler {
   cursor: pointer;
+  // border: 2px solid orange;
 }
 
 nav {
@@ -283,6 +294,7 @@ nav {
   right: 0;
   width: 0;
   transition: all ease-in-out $transition-speed-slow;
+  // border: 2px solid pink;
 }
 
 nav.show {
@@ -295,6 +307,9 @@ nav.show {
 }
 .nav-list-item {
   margin: 2rem;
+  a {
+    color: rgb($dark-blue);
+  }
 }
 
 main {
@@ -339,6 +354,41 @@ footer {
   font-weight: 700;
   line-height: 120px;
   font-size: 26px;
+}
+
+@media only screen and (min-width: 750px) {
+  header {
+    height: $header-height-md;
+    .container {
+      // border: 2px solid red;
+      gap: 5rem;
+      & > a {
+        font-size: 3rem;
+      }
+    }
+  }
+  .menu-toggler {
+    display: none;
+  }
+
+  nav {
+    position: static;
+    width: 100%;
+    background-color: rgb($white);
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: left;
+    a {
+      font-weight: 700;
+      color: rgb($medium-grey);
+    }
+  }
+
+  main {
+    margin-top: $header-height-md;
+  }
 }
 
 @media only screen and (min-width: 750px) {
