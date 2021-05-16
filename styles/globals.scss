@@ -10,7 +10,7 @@ $red: (223 86 86);
 $black: $dark-blue;
 $white: (255 255 255);
 
-@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@300;500;700;900&display=swap");
 
 html,
 body,
@@ -182,10 +182,11 @@ h1 {
 }
 
 h1.large {
+  display: none;
   font-size: 120px;
   letter-spacing: -5px;
   line-height: 100%;
-  color: rgb($very-light-grey);
+  // color: rgb($very-light-grey);
 }
 
 h2 {
@@ -221,12 +222,28 @@ p:last-of-type {
   h1 {
     font-size: 80px;
   }
+  h1.large {
+    display: block;
+  }
 
   h2 {
     font-size: 56px;
   }
 }
 
+@media only screen and (min-width: 1150px) {
+  h1.large {
+    font-size: 200px;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.light {
+  color: rgb($very-light-grey);
+}
 button,
 .button {
   cursor: pointer;
@@ -295,7 +312,7 @@ $header-height-lg: 30px;
 $header-height: $header-height-sm;
 
 header {
-  background-color: rgb($white);
+  background-color: rgba(rgb($white), 0.99);
   height: $header-height;
   position: fixed;
   top: 0;
@@ -364,6 +381,7 @@ footer {
   min-height: $header-height;
   padding: 5rem 0 4rem;
   position: relative;
+  margin-top: 5rem;
 }
 
 .footer-link-list {
@@ -426,7 +444,7 @@ footer {
   nav {
     position: static;
     width: 100%;
-    background-color: rgb($white);
+    background: none;
   }
 
   .nav-list {
@@ -491,6 +509,7 @@ footer {
   min-height: 80vh;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   position: relative;
   h1,
   h2,
@@ -510,14 +529,128 @@ footer {
   }
 }
 
+.welcome-container {
+  img {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .welcome-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    grid-template-rows: max-content 100px auto;
+    gap: 2rem;
+    .welcome-header {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+      z-index: 10;
+      height: 200px;
+    }
+    img {
+      grid-column: 2;
+      grid-row: 2 / span 2;
+      display: block;
+    }
+    div {
+      grid-column: 1;
+      max-width: max-content;
+    }
+  }
+}
+
 .home-container {
   background-image: url("/assets/home/image-hero-paramour.jpg");
 }
 
 section {
+  margin-bottom: 5rem;
   padding: 2rem;
 }
 
 .small-team-container {
   background-image: url("/assets/home/image-small-team.jpg");
+}
+
+.feature-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto repeat(3, 200px) auto;
+  gap: 1rem;
+}
+
+.featured {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  grid-column: span 3;
+  & > div {
+    background-color: rgba(rgb($black), 0.3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    color: white;
+    padding: 1rem;
+    display: grid;
+    align-items: flex-end;
+    p {
+      margin: 0;
+      font-weight: 300;
+    }
+  }
+}
+
+.featured-project-del-sol {
+  background-image: url("/assets/portfolio/image-del-sol.jpg");
+}
+
+.featured-228b-tower {
+  background-image: url("/assets/portfolio/image-228b.jpg");
+  background-position: 100% 10%;
+}
+.featured-le-prototype {
+  background-image: url("/assets/portfolio/image-prototype.jpg");
+}
+.feature-number {
+  display: none;
+}
+@media only screen and (min-width: 750px) {
+  .feature-container {
+    grid-template-rows: auto repeat(3, 400px) auto;
+  }
+  .feature-button {
+    grid-row: 1;
+    grid-column: 3;
+    align-self: center;
+  }
+  .feature-number {
+    display: block;
+    color: rgba(rgb($white), 0.9);
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .feature-container {
+    grid-template-rows: auto repeat(3, 180px) auto;
+    h2 {
+      grid-column: 1 / span 3;
+      grid-row: 1;
+    }
+  }
+  .feature-button {
+    // grid-row: -1;
+    grid-row: 1;
+    justify-self: right;
+  }
+  .featured {
+    grid-column: span 1;
+    grid-row: 2 / span 4;
+  }
 }

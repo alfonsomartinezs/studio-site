@@ -22,8 +22,11 @@ export default function Home() {
       </section>
     
 
-      <section className="container">
-        <h2>Welcome to Dot Studio</h2>
+      <section className=" welcome-container container">
+        <h1 className="large light text-center welcome-header">Welcome</h1>
+
+        <div>
+          <h2>Welcome to Dot Studio</h2>
         <p>
           We have a unique network and skillset to help bring your projects to life. Our small team of highly skilled individuals combined with our large network put us in a strong position to deliver exceptional results.
         </p>
@@ -35,7 +38,8 @@ export default function Home() {
         <p>
           We work closely with our clients so that we understand the intricacies of each project. This allows us to work in harmony the surrounding area to create truly stunning projects that will stand the test of time.
         </p>
-
+        </div>
+        <img className="welcome-image" src="/assets/home/image-welcome.jpg"/>
 
       </section>
       
@@ -52,26 +56,41 @@ export default function Home() {
       </section>
       
 
-      <section className="container">
+      <section className="container feature-container">
         <h2>Featured</h2>
-        <ul>
-          <li>
-              <h3>Project Title</h3>
-              <p>See More</p>
-          </li>
+          <div className="featured featured-project-del-sol">
+          <div>    
+          <div>
+            <h3>Project Del Sol</h3>
+            <p>View All Projects</p>
+          </div>
+          </div>
+          <h1 className="large feature-number">1</h1>
+          
+          </div>
 
-          <li>
-              <h3>Project Title</h3>
-              <p>See More</p>
-          </li>
+        <div className="featured featured-228b-tower">
+          <div>
+          <div>
+            <h3>228B Tower</h3>
+            
+            <p>View All Projects</p>
+            </div>
+          </div>
+          <h1 className="large feature-number">2</h1>
+          </div>
 
-          <li>
-              <h3>Project Title</h3>
-              <p>See More</p>
-          </li>
-        </ul>
+        <div className="featured featured-le-prototype">
+          <div>
+            <div>
+              <h3>Le Prototype</h3>
+            <p>View All Projects</p>
+            </div>
+          </div>
+          <h1 className="large feature-number">3</h1>
+          </div>
 
-        <a className="button" href="/about">
+        <a className="button feature-button" href="/about">
           <span>See All</span>
           <img src="/assets/icon-arrow.svg" />  
         </a>
