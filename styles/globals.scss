@@ -192,6 +192,8 @@ h2 {
   font-size: 40px;
   line-height: 100%;
   letter-spacing: -2px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 h3 {
@@ -203,8 +205,16 @@ p {
   max-width: 55ch;
 }
 
+p:first-of-type {
+  margin-top: 2rem;
+}
+
 p + p {
   margin-top: 1rem;
+}
+
+p:last-of-type {
+  margin-bottom: 3rem;
 }
 
 @media only screen and (min-width: 750px) {
@@ -221,18 +231,32 @@ button,
 .button {
   cursor: pointer;
   display: block;
+  width: max-content;
   background-color: rgb($black);
   font-size: inherit;
   color: rgb($white);
   font-family: inherit;
   font-weight: 700;
-  padding: 1.7rem;
+  padding: 1.3rem 1.7rem;
   outline: none;
   border: none;
   transition: all ease-in-out $transition-speed-main;
+  display: flex;
+  align-items: center;
 
   img {
     fill: rgb($white);
+    margin-left: 1.5rem;
+    width: 24px;
+    height: 20px;
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  button,
+  .button {
+    padding: 1.7rem 2rem;
   }
 }
 
@@ -265,7 +289,7 @@ a:hover {
 }
 
 $header-height-sm: 5rem;
-$header-height-md: 10rem;
+$header-height-md: 8rem;
 $header-height-lg: 30px;
 
 $header-height: $header-height-sm;
@@ -277,6 +301,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 100;
   // border: 2px solid red;
   .container {
     display: flex;
@@ -381,12 +406,6 @@ footer {
   span {
     width: 100%;
   }
-  img {
-    margin-left: 2rem;
-    width: 24px;
-    height: 24px;
-    display: block;
-  }
 }
 
 @media only screen and (min-width: 750px) {
@@ -466,4 +485,39 @@ footer {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.hero-container {
+  min-height: 80vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  h1,
+  h2,
+  p {
+    color: white;
+  }
+  & > div {
+    background-color: rgba(rgb($black), 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    place-content: center;
+    padding: 2rem;
+  }
+}
+
+.home-container {
+  background-image: url("/assets/home/image-hero-paramour.jpg");
+}
+
+section {
+  padding: 2rem;
+}
+
+.small-team-container {
+  background-image: url("/assets/home/image-small-team.jpg");
 }
