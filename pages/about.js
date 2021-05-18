@@ -6,6 +6,7 @@ const About = () => {
       <section className="about-hero-section">
         <img src="/assets/about/image-hero.jpg" />
         <div className="about-hero-text">
+          <h1 className="large light text-center">Welcome</h1>
           <h2>Meet your team!</h2>
           <p>
             Our small team of world-class professionals will work with you every step of the way. Strong relationships are at the core of everything we do. This extends to the relationship our projects have with their surroundings.
