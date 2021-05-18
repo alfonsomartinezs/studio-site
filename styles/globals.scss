@@ -194,7 +194,7 @@ h2 {
   line-height: 100%;
   letter-spacing: -2px;
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 h3 {
@@ -570,7 +570,7 @@ footer {
 
 section {
   margin-bottom: 5rem;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .small-team-container {
@@ -656,5 +656,94 @@ section {
   .featured {
     grid-column: span 1;
     grid-row: 2 / span 4;
+  }
+}
+
+.about-hero-section {
+  // border: 2px solid orange;
+  padding: 1rem;
+  width: 100%;
+  position: relative;
+
+  img {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    display: block;
+    // z-index: -1;
+  }
+}
+
+.about-hero-text {
+  position: relative;
+  margin-top: -5rem;
+  z-index: 10;
+  background-color: rgb($white);
+  padding: 2rem;
+  margin-left: 0;
+  width: 90%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.about-user {
+  margin-bottom: 3rem;
+  grid-column: span 6;
+  p {
+    margin-top: 0;
+    margin-bottom: 0.3rem;
+  }
+  h3 {
+    margin-top: 1rem;
+  }
+}
+
+.social-icon img {
+  width: 24px;
+  height: 24px;
+}
+.social-icon + .social-icon img {
+  margin-left: 1.5rem;
+}
+
+.designers-section {
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.designers-header {
+  grid-column: 1 / span 6;
+}
+@media only screen and (min-width: 750px) {
+  .about-user {
+    grid-column: span 3;
+  }
+
+  .about-hero-section {
+    img {
+      width: 90%;
+      max-width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .about-hero-text {
+      margin-top: -12rem;
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .designers-header {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 3;
+  }
+  .about-user {
+    grid-column: span 2;
   }
 }

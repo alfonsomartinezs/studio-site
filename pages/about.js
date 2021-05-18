@@ -1,16 +1,18 @@
+import AboutUser from "../components/AboutUser"
+
 const About = () => {
   return (
-    <div className="container">
-      <section>
+    <>
+      <section className="about-hero-section">
         <img src="/assets/about/image-hero.jpg" />
-        <div>
-          <h2>Your team of professinals</h2>
+        <div className="about-hero-text">
+          <h2>Meet your team!</h2>
           <p>
             Our small team of world-class professionals will work with you every step of the way. Strong relationships are at the core of everything we do. This extends to the relationship our projects have with their surroundings.
           </p>
         </div>
       </section>
-
+      <div className="container">
       <section>
         <h2>Our Heritage</h2>
         <p>
@@ -26,19 +28,49 @@ const About = () => {
         </p>
         
 
+
+
       </section>
 
-      
-      <section>
 
-        <h2>The Leaders</h2>
+      <section className="designers-section">
+
+        <h2 className="designers-header">The Designers</h2>
+        <AboutUser
+          name="Alexis Reyna"
+          imagePath="/assets/about/avatar-alexis.jpg"
+          role="Lead Designer"
+          
+        />
+
+        <AboutUser
+          name="Ayo Smith"
+          imagePath="/assets/about/avatar-ayo.jpg"
+          role="Lead Designer"
+          
+        />
+
+        <AboutUser
+          name="Jackson Rourke"
+          imagePath="/assets/about/avatar-steven.jpg"
+          role="Designer"
+          
+        />
+
+        <AboutUser
+          name="Maria Simpson"
+          imagePath="/assets/about/avatar-maria.jpg"
+          role="Designer"
+          
+        />
         
 
       </section>
 
 
 
-    </div>
+      </div>
+      </>
   );
 }
  
