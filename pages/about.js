@@ -5,16 +5,20 @@ const About = () => {
     <>
       <section className="about-hero-section">
         <img src="/assets/about/image-hero.jpg" />
+        <h1 className="large light text-center about-text">About</h1>
         <div className="about-hero-text">
-          <h1 className="large light text-center">Welcome</h1>
+          <div>
           <h2>Meet your team!</h2>
           <p>
-            Our small team of world-class professionals will work with you every step of the way. Strong relationships are at the core of everything we do. This extends to the relationship our projects have with their surroundings.
+              Our small team of world-class professionals will work with you every step of the way. Strong relationships are at the core of everything we do. This extends to the relationship our projects have with their surroundings.
           </p>
+          </div>
+          
         </div>
       </section>
       <div className="container">
-      <section>
+        <section className="heritage-section">
+          <div>
         <h2>Our Heritage</h2>
         <p>
           Founded in 2007, we started as a trio of architects. Our complimentary skills and relentless attention to detail turned Arch into one of the most sought after boutique firms in the country.
@@ -25,8 +29,10 @@ const About = () => {
         </p>
         
         <p>
-          Our small team of world-class professionals provides input on every project.
+              Our small team of world-class professionals provides input on every project.
         </p>
+          </div>
+          <img className="heritage-image" src="/assets/about/image-heritage.jpg"></img>
         
 
 

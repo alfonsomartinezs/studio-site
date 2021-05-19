@@ -154,13 +154,17 @@ table {
   border-spacing: 0;
 }
 
-$transition-speed-main: 300ms;
+$transition-speed-main: 250ms;
 $transition-speed-slow: 300ms;
 
 /*typography settings */
-
 :root {
   font-size: 15px;
+}
+
+::selection {
+  background-color: rgb($dark-blue);
+  color: rgb($white);
 }
 
 strong {
@@ -280,6 +284,7 @@ button,
 button:hover,
 .button:hover {
   background-color: rgb($dark-grey);
+  color: rgb($white);
 }
 
 button:active,
@@ -665,28 +670,28 @@ section {
   width: 100%;
   position: relative;
   display: grid;
-  grid-template-rows: max-content 1fr 5rem auto;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  border: 2px solid red;
+  grid-template-rows: 1fr 5rem 1fr auto;
+  grid-template-columns: repeat(12, 1fr);
 
   img {
+    // border: 2px solid red;
     position: relative;
     width: 100%;
     height: 100%;
     display: block;
-    border: 2px solid orange;
-    grid-row: 1 / span 3;
-    grid-column: 1 / span 4;
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 12;
+    z-index: -1;
   }
 }
 
 .about-hero-text {
-  border: 2px solid blue;
+  // border: 2px solid blue;
   position: relative;
   background-color: rgb($white);
   padding: 2rem;
-  grid-row: 3 / span 2;
-  grid-column: 1 / span 3;
+  grid-row: 2 / span 2;
+  grid-column: 1 / span 11;
 }
 
 img {
@@ -705,11 +710,17 @@ img {
   }
 }
 
-.social-icon img {
+.social-icon {
   width: 24px;
   height: 24px;
+  transition: ease-in-out $transition-speed-main all;
 }
-.social-icon + .social-icon img {
+
+.social-icon:hover {
+  fill: rgb($light-grey);
+}
+
+.social-icon + .social-icon {
   margin-left: 1.5rem;
 }
 
@@ -730,20 +741,76 @@ img {
   .about-hero-section {
     width: 90%;
     max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+      grid-row: 1 / span 3;
+      grid-column: 1 / span 12;
+    }
     .about-hero-text {
-      margin-top: -12rem;
-      margin-left: auto;
-      margin-right: 0;
+      display: grid;
+      align-content: flex-end;
+      grid-column: 2 / -1;
+      grid-row: 3 / span 1;
+      h2 {
+        margin-bottom: 2rem;
+      }
+    }
+    .about-text {
+      grid-row: 3 / span 1;
+      margin-top: -4rem;
+      grid-column: 2 / span 10;
+      z-index: 1;
+      text-align: left;
     }
   }
 }
 
-@media only screen and (min-width: 1100px) {
+@media (min-width: 1100px) {
   .designers-header {
     grid-column: 1 / span 2;
     grid-row: 1 / span 3;
   }
   .about-user {
     grid-column: span 2;
+  }
+
+  .about-hero-section {
+    img {
+      grid-column: 1 / span 6;
+    }
+
+    .about-hero-text {
+      grid-column: 6 / span 6;
+    }
+
+    .about-text {
+      grid-column: 6 / span 6;
+      grid-row: 2 / span 1;
+    }
+  }
+
+  .heritage-section {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: flex-end;
+    gap: 3rem;
+
+    div {
+      p + p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.heritage-image {
+  display: none;
+}
+
+@media (min-width: 1100px) {
+  .heritage-image {
+    display: block;
   }
 }

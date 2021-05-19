@@ -1,4 +1,6 @@
 import Link from "next/link"
+import LinkedinIcon from "./LinkedinIcon";
+import TwitterIcon from "./TwitterIcon";
 
 const AboutUser = ({imagePath,name,role}) => {
   return (
@@ -6,8 +8,8 @@ const AboutUser = ({imagePath,name,role}) => {
       <img src={imagePath} />
       <h3>{name}</h3>
       <p>{role}</p>
-      <a className="social-icon" href="/"><img src="/assets/icon-linkedin.svg"></img></a>
-      <a className="social-icon" href="/"><img src="/assets/icon-twitter.svg"></img></a>
+      <a className="social-icon" href="/"><LinkedinIcon/></a>
+      <a className="social-icon" href="/"><TwitterIcon/></a>
     </div>
    );
 }
