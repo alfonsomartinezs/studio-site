@@ -4,7 +4,7 @@ const About = () => {
   return (
     <>
       <section className="about-hero-section">
-        <img src="/assets/about/image-hero.jpg" />
+        <img className="about-hero-image" src="/assets/about/spray-cans.jpg" />
         <h1 className="large light text-center about-text">About</h1>
         <div className="about-hero-text">
           <div>
@@ -32,7 +32,7 @@ const About = () => {
               Our small team of world-class professionals provides input on every project.
         </p>
           </div>
-          <img className="heritage-image" src="/assets/about/image-heritage.jpg"></img>
+          <img className="heritage-image" src="/assets/portfolio/mural-heritage.jpg"></img>
         
 
 
@@ -47,28 +47,28 @@ const About = () => {
           name="Alexis Reyna"
           imagePath="/assets/about/avatar-alexis.jpg"
           role="Lead Designer"
-          
+          clipClass = "clip-bottom-left"
         />
 
         <AboutUser
           name="Ayo Smith"
           imagePath="/assets/about/avatar-ayo.jpg"
           role="Lead Designer"
-          
+         clipClass = "clip-top-right"
         />
 
         <AboutUser
           name="Jackson Rourke"
           imagePath="/assets/about/avatar-steven.jpg"
           role="Designer"
-          
+          clipClass = "clip-top-left"
         />
 
         <AboutUser
           name="Maria Simpson"
           imagePath="/assets/about/avatar-maria.jpg"
           role="Designer"
-          
+          clipClass = "clip-bottom-right"
         />
         
 

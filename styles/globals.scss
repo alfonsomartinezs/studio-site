@@ -237,7 +237,7 @@ p:last-of-type {
 
 @media only screen and (min-width: 1150px) {
   h1.large {
-    font-size: 200px;
+    font-size: 160px;
   }
 }
 
@@ -570,7 +570,7 @@ footer {
 }
 
 .home-container {
-  background-image: url("/assets/home/image-hero-paramour.jpg");
+  background-image: url("/assets/portfolio/mural-overhead.jpg");
 }
 
 section {
@@ -579,7 +579,9 @@ section {
 }
 
 .small-team-container {
-  background-image: url("/assets/home/image-small-team.jpg");
+  background-image: url("/assets/portfolio/mural-guerra.jpg");
+  background-size: cover;
+  background-position: 50% 20%;
 }
 
 .feature-container {
@@ -614,15 +616,15 @@ section {
 }
 
 .featured-project-del-sol {
-  background-image: url("/assets/portfolio/image-del-sol.jpg");
+  background-image: url("/assets/portfolio/mural-fancy.jpg");
 }
 
-.featured-228b-tower {
-  background-image: url("/assets/portfolio/image-228b.jpg");
+.featured-mrn-hand {
+  background-image: url("/assets/portfolio/mural-hand.jpg");
   background-position: 100% 10%;
 }
-.featured-le-prototype {
-  background-image: url("/assets/portfolio/image-prototype.jpg");
+.featured-cartoon-prototype {
+  background-image: url("/assets/portfolio/mural-cartoon.jpg");
 }
 .feature-number {
   display: none;
@@ -815,4 +817,23 @@ img {
   .heritage-image {
     display: block;
   }
+}
+
+.about-hero-image {
+  object-fit: cover;
+}
+
+.clip-top-left {
+  clip-path: polygon(6% 0, 100% 0, 100% 100%, 0% 100%);
+}
+.clip-top-right {
+  clip-path: polygon(0 0, 94% 0, 100% 100%, 0% 100%);
+}
+
+.clip-bottom-left {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%);
+}
+
+.clip-bottom-right {
+  clip-path: polygon(0 0, 100% 0, 94% 100%, 0% 100%);
 }

@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <section className="home-container container hero-container">
         <div>
-          <h1>Project Paramour</h1>
+          <h1>Project Paradise</h1>
           <p>
             Project made for an art museum near Southwest London. Project Paramour is a statement of bold, modern architecture.
           </p>
@@ -37,7 +37,7 @@ export default function Home() {
           We work closely with our clients so that we understand the intricacies of each project. This allows us to work in harmony the surrounding area to create truly stunning projects that will stand the test of time.
         </p>
         </div>
-        <img className="welcome-image" src="/assets/home/image-welcome.jpg"/>
+        <img className="welcome-image" src="/assets/portfolio/mural-raccoon.jpg"/>
 
       </section>
       
@@ -59,7 +59,7 @@ export default function Home() {
           <div className="featured featured-project-del-sol">
           <div>    
           <div>
-            <h3>Project Del Sol</h3>
+            <h3>We can be Fan¢y</h3>
             <p>View All Projects</p>
           </div>
           </div>
@@ -67,10 +67,10 @@ export default function Home() {
           
           </div>
 
-        <div className="featured featured-228b-tower">
+        <div className="featured featured-mrn-hand">
           <div>
           <div>
-            <h3>228B Tower</h3>
+            <h3>MRN</h3>
             
             <p>View All Projects</p>
             </div>
@@ -78,10 +78,10 @@ export default function Home() {
           <h1 className="large feature-number">2</h1>
           </div>
 
-        <div className="featured featured-le-prototype">
+        <div className="featured featured-cartoon-prototype">
           <div>
             <div>
-              <h3>Le Prototype</h3>
+              <h3>Cartoon Jux</h3>
             <p>View All Projects</p>
             </div>
           </div>
