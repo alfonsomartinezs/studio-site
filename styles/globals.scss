@@ -305,7 +305,7 @@ a:hover {
 
 .container {
   width: 90%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -672,6 +672,7 @@ section {
   display: grid;
   grid-template-rows: 1fr 5rem 1fr auto;
   grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 0;
 
   img {
     // border: 2px solid red;
@@ -740,9 +741,10 @@ img {
 
   .about-hero-section {
     width: 90%;
-    max-width: 1400px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 3rem;
 
     img {
       grid-row: 1 / span 3;
