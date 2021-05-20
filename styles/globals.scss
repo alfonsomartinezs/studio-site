@@ -167,6 +167,10 @@ $transition-speed-slow: 300ms;
   color: rgb($white);
 }
 
+img::selection {
+  background-color: rgba(1, 1, 1, 0.2);
+}
+
 strong {
   font-weight: 700;
 }
@@ -836,4 +840,89 @@ img {
 
 .clip-bottom-right {
   clip-path: polygon(0 0, 100% 0, 94% 100%, 0% 100%);
+}
+
+.portfolio-gallery {
+  // border: 2px solid red;
+  display: grid;
+  grid-auto-rows: 240px;
+  gap: 2rem;
+  grid-auto-flow: row dense;
+}
+
+.portfolio-item-container {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+@media (min-width: 1100px) {
+  .portfolio-gallery {
+    grid-auto-rows: 560px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  }
+  .landscape {
+    grid-column: span 2;
+  }
+}
+
+.portfolio-fancy {
+  background-image: url("/assets/portfolio/mural-fancy.jpg");
+}
+
+.portfolio-mrm {
+  background-image: url("/assets/portfolio/mural-hand.jpg");
+}
+
+.portfolio-cartoon {
+  background-image: url("/assets/portfolio/mural-cartoon.jpg");
+}
+
+.portfolio-raccoon {
+  background-image: url("/assets/portfolio/mural-raccoon.jpg");
+}
+
+.portfolio-lion {
+  background-image: url("/assets/portfolio/mural-lion.jpg");
+}
+
+.portfolio-woman {
+  background-image: url("/assets/portfolio/mural-woman.jpg");
+}
+
+.portfolio-carousel {
+  background-image: url("/assets/portfolio/mural-heritage.jpg");
+}
+
+.portfolio-guerra {
+  background-image: url("/assets/portfolio/mural-guerra.jpg");
+}
+
+.portfolio-mind {
+  background-image: url("/assets/portfolio/mural-mind.jpg");
+}
+
+.portfolio-ceramic {
+  background-image: url("/assets/portfolio/mural-ceramic.jpg");
+}
+
+.portfolio-link {
+  background-color: rgba(rgb($dark-blue), 0.3);
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: grid;
+  align-content: flex-end;
+  color: rgb($white);
+  padding: 2rem;
+  p {
+    margin: 0;
+  }
+  &:hover {
+    color: rgb($white);
+    background-color: rgba(rgb($dark-blue), 0.7);
+  }
 }

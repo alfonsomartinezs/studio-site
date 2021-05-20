@@ -9,7 +9,7 @@ export default function Home() {
         <div>
           <h1>Project Paradise</h1>
           <p>
-            Project made for an art museum near Southwest London. Project Paramour is a statement of bold, modern architecture.
+            Project made for an art museum near Southwest London. Project Paramour is a statement of bold, modern architecture. Coming soon.
           </p>
           <a className="button" href="/portfolio">
             <span>See our Portfolio</span>
