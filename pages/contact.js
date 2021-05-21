@@ -1,6 +1,14 @@
 import AboutUser from "../components/AboutUser";
+import Form from "../components/Form";
 
 const Contact = () => {
+
+
+  const submitForm = (e) => {
+    console.log(e)
+  }
+
+
   return (<div>
     <>
       <section className="about-hero-section">
@@ -35,6 +43,15 @@ const Contact = () => {
 
           
         </section>
+
+      <section className="container form-container">
+        <div>
+          <h2 className="contact-header">Contact Us</h2>
+          <p>Please fill out all fields. The form requires them.</p>
+        </div>
+        <Form buttonText="connect" formFunction={submitForm}/>
+      </section>
+      
 
       </>
   </div> );
