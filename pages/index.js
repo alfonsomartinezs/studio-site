@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from 'next/Link'
 
 export default function Home() {
   return (
@@ -56,6 +57,10 @@ export default function Home() {
 
       <section className="container feature-container">
         <h2>Featured</h2>
+
+        <Link href="/portfolio">
+          
+
           <div className="featured featured-project-del-sol">
           <div>    
           <div>
@@ -66,7 +71,8 @@ export default function Home() {
           <h1 className="large feature-number">1</h1>
           
           </div>
-
+        </Link>
+        <Link href="/portfolio">
         <div className="featured featured-mrn-hand">
           <div>
           <div>
@@ -77,7 +83,8 @@ export default function Home() {
           </div>
           <h1 className="large feature-number">2</h1>
           </div>
-
+        </Link>
+        <Link href="/portfolio">
         <div className="featured featured-cartoon-prototype">
           <div>
             <div>
@@ -87,7 +94,8 @@ export default function Home() {
           </div>
           <h1 className="large feature-number">3</h1>
           </div>
-
+        </Link>
+        
         <a className="button feature-button" href="/about">
           <span>See All</span>
           <img src="/assets/icon-arrow.svg" />  

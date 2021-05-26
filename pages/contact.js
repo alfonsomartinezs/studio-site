@@ -26,6 +26,7 @@ const Contact = () => {
       </section>
         <section className="container contact-details">
           <h2>Contact Details</h2>
+          
           <div>
             <h3>Main Office</h3>
             <p>Mail: contact@dot.com</p>
@@ -34,7 +35,7 @@ const Contact = () => {
           </div>
 
           <div>
-            <h3>Main Office</h3>
+            <h3>Moon Base Office</h3>
             <p>Mail: contact@dot.com</p>
             <p>Address: 5555 Local Start CA</p>
             <p>Phone: 619-123-1234</p>
@@ -47,7 +48,7 @@ const Contact = () => {
       <section className="container form-container">
         <div>
           <h2 className="contact-header">Contact Us</h2>
-          <p>Please fill out all fields. The form requires them.</p>
+          <p className="contact-sub-header">Please fill out all fields. The form requires them.</p>
         </div>
         <Form buttonText="connect" formFunction={submitForm}/>
       </section>

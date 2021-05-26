@@ -1,31 +1,41 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const Form = ({formFunction,buttonText = "submit"}) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const formAction = (e) => {
+  const nameRef = useRef();
+  const emailRef = useRef();
+  const messageRef = useRef();
+  const formAction = async (e) => {
     e.preventDefault();
-    formFunction(e)
+    const response = await formFunction(e);
+    nameRef.current.value = ""
+    emailRef.current.value = ""
+    messageRef.current.value = ""
+    markClear();
   }
 
   const markSubmitted = () => {
     setIsSubmitted(true);
   }
+  const markClear = () => {
+    setIsSubmitted(false);
+  }
   return (
-    <form className={ `form ${isSubmitted ? "submitted-form": ""}`} onSubmit={formAction}>
+    <form className={`form ${isSubmitted ? "submitted-form" : ""}`} onSubmit={formAction}>
       <label className="form-field">
         
-        <input id="name" type="text" autoComplete="name" required />
+        <input id="name" ref={nameRef}type="text" autoComplete="name" required />
         <span className="placeholder">Name</span>
       </label>
 
       <label className="form-field">
         
-        <input id="email" type="email" autoComplete="email" required />
+        <input id="email" ref={emailRef}type="email" autoComplete="email" required />
         <span className="placeholder">Email</span>
       </label>
 
       <label className="form-field">
-        <textarea id="message"  rows="10" minLength="5" required></textarea>
+        <textarea id="message" ref={messageRef} rows="10" minLength="5" required></textarea>
         <span className="placeholder">Message</span>
       </label>
       
