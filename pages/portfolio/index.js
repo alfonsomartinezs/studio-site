@@ -17,7 +17,7 @@ const Portfolio = () => {
       <PortfolioItem imageClass="carousel" title="Icons" date="December 2013"/>
       <PortfolioItem imageClass="guerra" landscape="true" title="Guerra" date="December 2013"/>
 
-      <PortfolioItem imageClass="paradise" landscape="true" title="Pradise" date="December 2013"/>
+      <PortfolioItem imageClass="paradise" landscape="true" title="Paradise" date="December 2013"/>
       <PortfolioItem imageClass="mind" title="Autumn" date="December 2013"/>
       
       
