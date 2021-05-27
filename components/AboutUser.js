@@ -6,7 +6,7 @@ const AboutUser = ({ imagePath, name, role, clipClass }) => {
   console.log(clipClass)
   return (
     <div className="about-user">
-      <img src={imagePath} className={ clipClass}/>
+      <img src={imagePath} className={clipClass} alt={`a picture of ${name}`}/>
       <h3>{name}</h3>
       <p>{role}</p>
       <a className="social-icon" href="/"><LinkedinIcon/></a>

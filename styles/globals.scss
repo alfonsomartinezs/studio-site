@@ -685,11 +685,11 @@ section {
   width: 100%;
   position: relative;
   display: grid;
-  grid-template-rows: 1fr 5rem 1fr auto;
+  grid-template-rows: 1fr 3rem 1fr auto;
   grid-template-columns: repeat(12, 1fr);
   margin-bottom: 0;
 
-  img {
+  .about-image-container {
     // border: 2px solid red;
     position: relative;
     width: 100%;
@@ -760,8 +760,9 @@ img {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 3rem;
+    grid-template-rows: 1fr 3rem 1fr auto;
 
-    img {
+    .about-image-container {
       grid-row: 1 / span 3;
       grid-column: 1 / span 12;
     }
@@ -794,7 +795,8 @@ img {
   }
 
   .about-hero-section {
-    img {
+    grid-template-rows: 1fr 3rem 1fr auto;
+    .about-image-container {
       grid-column: 1 / span 6;
     }
 
