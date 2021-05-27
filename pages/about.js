@@ -9,7 +9,7 @@ const About = () => {
       </Head>
       <section className="about-hero-section">
         <div className="about-image-container">
-          <Image className="about-hero-image" layout="fill" src="/assets/about/spray-cans.jpg" alt="an array of color spray paint cans"/>
+          <Image className="about-hero-image" layout="fill" src="/assets/about/spray-cans.jpg" priority={true} alt="an array of color spray paint cans"/>
         </div>
 
         <h1 className="large light text-center about-text">About</h1>
