@@ -1,4 +1,4 @@
-import Link from 'next/Link'
+import Link from 'next/link'
 const PortfolioItem = ({ imageClass,landscape,title,date }) => {
   return (
     <div className={`portfolio-item-container portfolio-${imageClass} ${landscape ? "landscape": ""}`} >

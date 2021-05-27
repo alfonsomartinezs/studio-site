@@ -1,7 +1,11 @@
 import PortfolioItem from "./PortfolioItem"
-
+import Head from 'next/head'
 const Portfolio = () => {
   return (
+    <>
+            <Head>
+        <title>Dot Art Studio | Portfolio</title>
+      </Head>
     <div className="container portfolio-gallery">
       <PortfolioItem imageClass="fancy" title="We can be Fan¢y" date="December 2013"/>
 
@@ -18,7 +22,8 @@ const Portfolio = () => {
       
       
 
-  </div> );
+      </div>
+  </>);
 }
  
 export default Portfolio;

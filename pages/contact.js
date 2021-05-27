@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import AboutUser from "../components/AboutUser";
 import Form from "../components/Form";
@@ -10,8 +11,11 @@ const Contact = () => {
   }
 
 
-  return (<div>
+  return (
     <>
+      <Head>
+        <title>Dot Art Studio | Contact</title>
+      </Head>
       <section className="about-hero-section">
         <div className="about-image-container">
           <Image className="about-hero-image" layout="fill" src="/assets/image-phone.jpg"  alt="an old payphone with art painted over dirt."/>
@@ -58,7 +62,7 @@ const Contact = () => {
       
 
       </>
-  </div> );
+  );
 }
  
 export default Contact;

@@ -1,9 +1,12 @@
 import Image from "next/image";
 import AboutUser from "../components/AboutUser"
-
+import Head from 'next/head'
 const About = () => {
   return (
     <>
+            <Head>
+        <title>Dot Art Studio | About Us</title>
+      </Head>
       <section className="about-hero-section">
         <div className="about-image-container">
           <Image className="about-hero-image" layout="fill" src="/assets/about/spray-cans.jpg" alt="an array of color spray paint cans"/>
