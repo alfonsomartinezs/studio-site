@@ -18,7 +18,7 @@ const Contact = () => {
       </Head>
       <section className="about-hero-section">
         <div className="about-image-container">
-          <Image className="about-hero-image" layout="fill" src="/assets/image-phone.jpg"  alt="an old payphone with art painted over dirt."/>
+          <Image className="about-hero-image" layout="fill" src="/assets/image-phone.jpg" priority={true} alt="an old payphone with art painted over dirt."/>
         </div>
         <h1 className="large light text-center about-text">Contact</h1>
         <div className="about-hero-text">
