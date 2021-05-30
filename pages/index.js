@@ -13,7 +13,7 @@ export default function Home() {
         <div>
           <h1>Project Paradise</h1>
           <p>
-            Project made for an art museum near Southwest London. Project Paramour is a statement of bold, modern architecture. Coming soon.
+            A once abandoned lot brought to life as a community park. Project Paradise is a declaration of hope and rebirth. Coming soon.
           </p>
           <a className="button" href="/portfolio">
             <span>See our Portfolio</span>
@@ -34,7 +34,7 @@ export default function Home() {
         </p>
 
         <p>
-          Over the past 10 years, we have worked on all kinds of projects. From stations to high-rise buildings, we create spaces that inspire and delight.
+          Over the past 10 years, we have worked on all kinds of projects. From spray-painted walls to interactive community parks, we create spaces that inspire and delight.
         </p>
         
         <p>
